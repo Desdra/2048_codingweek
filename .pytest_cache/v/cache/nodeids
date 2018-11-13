@@ -1,3 +1,4 @@
 [
-  "test_grid_2048.py::test_create_grid"
+  "test_grid_2048.py::test_create_grid",
+  "test_grid_2048.py::test_init_grid"
 ]
