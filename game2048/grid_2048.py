@@ -1,5 +1,5 @@
 def create_grid():
-    s = []
+    grid = []
     for i in range(0,4):
-        s.append([' ',' ',' ', ' '])
-    return s
+        grid.append([' ',' ',' ', ' '])
+    return grid
