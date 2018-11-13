@@ -4,6 +4,7 @@
   "test/test_grid_2048.py::test_diplay_grid",
   "test/test_grid_2048.py::test_theme_size",
   "test/test_grid_2048.py::test_elem_to_string_size",
-  "test/test_player_interaction.py::test_player_setup",
-  "test/test_player_interaction.py::test_get_player_direction"
+  "test/test_player_interaction.py::test_player_theme",
+  "test/test_player_interaction.py::test_get_player_direction",
+  "test/test_player_interaction.py::test_player_setup_size"
 ]
