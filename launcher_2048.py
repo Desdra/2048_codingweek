@@ -1,6 +1,6 @@
-from game2048.game import *
+from game2048.game_2048 import *
 from game2048.grid_2048 import *
-from game2048.player_interaction import *
+from game2048.player_interaction_2048 import *
 
 
 grid = init_grid()
