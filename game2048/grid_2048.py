@@ -2,13 +2,13 @@ import random
 import numpy as np
 from game2048.themes import THEMES
 
-def create_grid():
+def create_grid(): #Crée une grille vide pour l'initialiser
     grid = []
     for i in range(0,4):
         grid.append([' ',' ',' ', ' '])
     return grid
 
-def init_grid():
+def init_grid(): #Ajoute les premières tuiles sur une grille vide
     grid = create_grid()
     i2,j2 = random.randint(0,3),random.randint(0,3)
     grid[i2][j2] = 2
