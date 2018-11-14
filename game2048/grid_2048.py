@@ -3,12 +3,14 @@ import numpy as np
 from game2048.themes import THEMES
 
 def create_grid():
+    """Crèe une grille vide"""
     grid = []
     for i in range(0,4):
         grid.append([' ',' ',' ', ' '])
     return grid
 
 def init_grid():
+    """Crèe une grille et remplie deux cases, une avec un 2 et une avec un 4"""
     grid = create_grid()
     i2,j2 = random.randint(0,3),random.randint(0,3)
     grid[i2][j2] = 2
@@ -19,6 +21,7 @@ def init_grid():
     return grid
 
 def display_grid(grid,theme_number, player_size):
+    """Convertit une grille en string pour l'affichage en prenant en compte les paramètres donnés par le jouer"""
     theme = THEMES[theme_number]
     theme_size_calc = theme_size(theme)
     size = max(theme_size_calc, player_size)
@@ -41,6 +44,7 @@ def display_grid(grid,theme_number, player_size):
     return string
 
 def theme_size(theme):
+    """Calcul la taille maximal des carctères du thème"""
     max = 0
     for case in range(1,14):
         if max < elem_to_string_size(theme[2**case]):
@@ -48,6 +52,7 @@ def theme_size(theme):
     return max
 
 def elem_to_string_size(n):
+    """Renvoie la taille en caractères d'un objet (str ou int)"""
     if type(n) == type("str"):
         return len(n)
     return int(np.ceil(np.log10(n)))

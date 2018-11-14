@@ -16,6 +16,7 @@ def evolve_line(line):
     return line
 
 def evolve_grid(grid,direction):
+    """Fais évoluer la grille à partir de la direction souhaitée par le joueur"""
     if direction == 0:
         for i in range(4):
             grid[i] = evolve_line(grid[i][::-1])[::-1]
@@ -42,6 +43,7 @@ def evolve_grid(grid,direction):
     return grid
 
 def create_new_tile(grid):
+    """ajoute un 2 ou un 4 à une case vide aléatoirement"""
     free_tiles = []
     for i in range(4):
         for j in range(4):
@@ -53,6 +55,7 @@ def create_new_tile(grid):
     return grid
 
 def check_for_lost(grid):
+    """vérifie que la grille n'est pas pleine"""
     for i in range(4):
         for j in range(4):
             if grid[i][j] == " ":
