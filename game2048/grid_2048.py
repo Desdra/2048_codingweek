@@ -2,23 +2,15 @@ import random
 import numpy as np
 from game2048.themes import THEMES
 
-<<<<<<< HEAD
-def create_grid(): #Crée une grille vide pour l'initialiser
-=======
 def create_grid():
     """create an empty grid"""
->>>>>>> arnaud
     grid = []
     for i in range(0,4):
         grid.append([' ',' ',' ', ' '])
     return grid
 
-<<<<<<< HEAD
-def init_grid(): #Ajoute les premières tuiles sur une grille vide
-=======
 def init_grid():
     """create an empty grid and fill one tile with 2 and another with 4"""
->>>>>>> arnaud
     grid = create_grid()
     i2,j2 = random.randint(0,3),random.randint(0,3)
     grid[i2][j2] = 2
