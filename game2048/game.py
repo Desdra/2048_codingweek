@@ -4,8 +4,10 @@ def evolve_line(line):
     """evolve a line as if it yas pushed to the left"""
     for i in range(4):
         for k in range(i+1,4):
-            if line[i] == line[k] and line[i]!=" ":
+            if line[i] == line[k] and line[i] != " ":
                 line[i],line[k] = 2*line[k]," "
+                break
+            if line[k]!=line[i] and line[k] != " ":
                 break
     for i in range(4):
         if line[i] == " ":
