@@ -14,7 +14,7 @@ def player_setup_size():
 
 def get_player_move(size_horizontal, grid):
     """ask and return the move the player want to play"""
-    move = input("Où voulez-vous jouez (rentrez le numéro de la colonne sachant qu'ils partent de 0)")
+    move = input("Où voulez-vous jouez")-1
     cond = True
     if move.isdigit():
         cond  = not(int(move) < size_horizontal and int(move) >= 0) or grid[0][int(move)] != " "
