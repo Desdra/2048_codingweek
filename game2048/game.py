@@ -1,7 +1,7 @@
 import random
 
 def evolve_line(line):
-    """fais évoluer une ligne comme si elle était déplacée vers la gauche"""
+    """evolve a line as if it yas pushed to the left"""
     for i in range(4):
         for k in range(i+1,4):
             if line[i] == line[k] and line[i]!=" ":
@@ -16,6 +16,7 @@ def evolve_line(line):
     return line
 
 def evolve_grid(grid,direction):
+    """evolve the grid according to the direction asked by the player"""
     if direction == 0:
         for i in range(4):
             grid[i] = evolve_line(grid[i][::-1])[::-1]
@@ -42,6 +43,7 @@ def evolve_grid(grid,direction):
     return grid
 
 def create_new_tile(grid):
+    """fill an empty tile with a 2 or a 4"""
     free_tiles = []
     for i in range(4):
         for j in range(4):
@@ -53,6 +55,7 @@ def create_new_tile(grid):
     return grid
 
 def check_for_lost(grid):
+    """Check whether the grid is full or not"""
     for i in range(4):
         for j in range(4):
             if grid[i][j] == " ":

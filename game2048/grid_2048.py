@@ -2,13 +2,23 @@ import random
 import numpy as np
 from game2048.themes import THEMES
 
+<<<<<<< HEAD
 def create_grid(): #Crée une grille vide pour l'initialiser
+=======
+def create_grid():
+    """create an empty grid"""
+>>>>>>> arnaud
     grid = []
     for i in range(0,4):
         grid.append([' ',' ',' ', ' '])
     return grid
 
+<<<<<<< HEAD
 def init_grid(): #Ajoute les premières tuiles sur une grille vide
+=======
+def init_grid():
+    """create an empty grid and fill one tile with 2 and another with 4"""
+>>>>>>> arnaud
     grid = create_grid()
     i2,j2 = random.randint(0,3),random.randint(0,3)
     grid[i2][j2] = 2
@@ -19,6 +29,7 @@ def init_grid(): #Ajoute les premières tuiles sur une grille vide
     return grid
 
 def display_grid(grid,theme_number, player_size):
+    """Convert grid to string to display it according to the parameters given by the player"""
     theme = THEMES[theme_number]
     theme_size_calc = theme_size(theme)
     size = max(theme_size_calc, player_size)
@@ -41,6 +52,7 @@ def display_grid(grid,theme_number, player_size):
     return string
 
 def theme_size(theme):
+    """compute the size of the biggest element of the theme"""
     max = 0
     for case in range(1,14):
         if max < elem_to_string_size(theme[2**case]):
@@ -48,6 +60,7 @@ def theme_size(theme):
     return max
 
 def elem_to_string_size(n):
+    """return the number of caracters needed to print a given element (int or str)"""
     if type(n) == type("str"):
         return len(n)
     return int(np.ceil(np.log10(n)))
