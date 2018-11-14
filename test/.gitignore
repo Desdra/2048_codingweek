@@ -2,5 +2,9 @@
 **\__pycache__
 .pytest_cache
 __pycache__
+<<<<<<< HEAD
 htmlcov\*
+=======
+htmlcov
+>>>>>>> 95e1e4522b82e986ba0ec1a3b570bc3e10775de1
 .coverage
