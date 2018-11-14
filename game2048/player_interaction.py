@@ -8,7 +8,7 @@ def player_setup_theme():
 
 def player_setup_size():
     size_number = input("Rentrez la taille de grille que vous souhaitez avoir")
-    return size_number
+    return int(size_number)
 
 
 def get_player_direction():

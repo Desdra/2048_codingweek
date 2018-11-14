@@ -2,8 +2,6 @@ import random
 import numpy as np
 from game2048.themes import THEMES
 
-theme = THEMES['0']
-
 def create_grid():
     grid = []
     for i in range(0,4):
@@ -20,7 +18,9 @@ def init_grid():
     grid[i4][j4] = 4
     return grid
 
-def display_grid(grid,theme,theme_size_calc, player_size):
+def display_grid(grid,theme_number, player_size):
+    theme = THEMES[theme_number]
+    theme_size_calc = theme_size(theme)
     size = max(theme_size_calc, player_size)
     string = ""
     for i in range(4):
