@@ -3,6 +3,7 @@ from game2048.grid_2048 import *
 from game2048.player_interaction_2048 import *
 
 def launch():
+    """lance le jeu"""
     grid = init_grid()
     theme_number = player_setup_theme()
     player_size = player_setup_size()
