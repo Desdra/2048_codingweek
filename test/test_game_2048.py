@@ -1,4 +1,4 @@
-from game2048.game import *
+from game2048.game_2048 import *
 from pytest import *
 
 from game2048.themes import THEMES
