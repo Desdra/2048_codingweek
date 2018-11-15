@@ -14,15 +14,16 @@ def player_setup_size():
 
 def get_player_move(size_horizontal, grid):
     """ask and return the move the player want to play"""
-    move = input("Où voulez-vous jouez")-1
+    move = input("Où voulez-vous jouez")
+    print(type(move))
     cond = True
     if move.isdigit():
-        cond  = not(int(move) < size_horizontal and int(move) >= 0) or grid[0][int(move)] != " "
+        cond  = not(int(move)-1 < size_horizontal and int(move)-1 >= 0) or grid[0][int(move)] != " "
 
     while cond:
         move = input("Coup non valide, recommencez")
         cond = True
         if move.isdigit():
-            cond  = not(int(move) < size_horizontal and int(move) >= 0) or grid[0][int(move)] != " "
+            cond  = not(int(move) -1 < size_horizontal and int(move) -1 >= 0) or grid[0][int(move)] != " "
 
-    return int(move)
+    return int(move)-1

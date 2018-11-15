@@ -8,6 +8,7 @@ def make_a_move(grid, player, move):
             i+=1
             break
     grid[i-1][move] = player
+    return grid
 
 def is_last_move_winning(grid,player,move):
     """check if the last move played makes the player who played it win"""
